@@ -33,7 +33,7 @@ function calcTime() {
     ret += '日当　　　　　　　：';
     ret += daily_pay;
     ret += "円\n"
-    ret += '宿泊費　　　　　　：';
+    ret += '宿泊費（基準値）　：';
     ret += accommodation_fee;
     ret += "円\n"
     ret += '航空券　　　　　　：';

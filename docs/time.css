@@ -1,0 +1,71 @@
+body {
+    background-color: aliceblue;
+}
+
+h5 {
+    margin: 10px;
+    text-align: center;
+}
+
+.lunchTimeSet {
+    text-align: center;
+}
+
+.lunchTimeSet input {
+    width: 90px;
+}
+
+.lunchTimeSet button {
+    padding: 0;
+    width: 100px;
+    height: 30px;
+}
+
+.container {
+    padding: 30px;
+    background-color: rgb(185, 203, 238);
+}
+
+.container input {
+    width: 90px;
+}
+
+.container button {
+    padding: 0;
+    width: 100px;
+    height: 30px;
+}
+
+.end {
+    margin-left: 20px;
+}
+
+.result {
+    margin-left: 20px;
+    width: 90px !important;
+}
+
+.btn-secondary {
+    margin-left: 20px !important;
+}
+
+.memo {
+    margin-left: 30px !important;
+    width: 400px !important;
+}
+
+.sum {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.sum input {
+    width: 80px !important;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: right;
+    margin-right: 150px;
+}

@@ -48,14 +48,14 @@
     </div> -->
 
     <div class="container">
-        <form name="timerForm1">
+        <form name="input_form">
             <table>
                 <tr>
                     <td>
                         <div class="start">地域</div>
                     </td>
                     <td>
-                        <div class="start"><select onchange="calcTime(timerForm1)" name="area">
+                        <div class="start"><select onchange="calcTime()" name="area">
                                 <option value="usa">USA</option>
                                 <option value="eu">EU</option>
                                 <option value="other">その他</option>
@@ -68,7 +68,7 @@
                         <div class="start">宿泊日数</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="length_stay">
+                        <div class="start"><input type="text" onchange="calcTime()" name="length_stay" value="3">泊
                         </div>
                     </td>
                 </tr>
@@ -77,7 +77,7 @@
                         <div class="start">日当が発生する日数（帰着日含む）</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="period">
+                        <div class="start"><input type="text" onchange="calcTime()" name="period" value="4">日
                         </div>
                     </td>
                 </tr>
@@ -86,7 +86,7 @@
                         <div class="start">航空券</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="flight_fare">
+                        <div class="start"><input type="text" onchange="calcTime()" name="flight_fare" value="200000">円
                         </div>
                     </td>
                 </tr>
@@ -95,7 +95,8 @@
                         <div class="start">その他交通費</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="transportation">
+                        <div class="start"><input type="text" onchange="calcTime()" name="transportation"
+                                value="10000">円
                         </div>
                     </td>
                 </tr>
@@ -104,7 +105,8 @@
                         <div class="start">学会参加費</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="registration_fee">
+                        <div class="start"><input type="text" onchange="calcTime()" name="registration_fee"
+                                value="100000">円
                         </div>
                     </td>
                 </tr>
@@ -113,7 +115,7 @@
                         <div class="start">海外旅行保険</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="insurance">
+                        <div class="start"><input type="text" onchange="calcTime()" name="insurance" value="10000">円
                         </div>
                     </td>
                 </tr>
@@ -122,7 +124,7 @@
                         <div class="start">eSIM</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="eSIM">
+                        <div class="start"><input type="text" onchange="calcTime()" name="eSIM" value="1000">円
                         </div>
                     </td>
                 </tr>
@@ -131,17 +133,20 @@
                         <div class="start">ビザ発行手数料</div>
                     </td>
                     <td>
-                        <div class="start"><input type="text" onchange="calcTime(timerForm1)" name="VISA">
+                        <div class="start"><input type="text" onchange="calcTime()" name="VISA" value="3000">円
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="start">結果</div>
+                    </td>
+                    <td>
+                        <div class="start"><textarea rows="16" cols="70" name="result" readonly></textarea>
                         </div>
                     </td>
                 </tr>
             </table>
-        </form>
-
-        <form name="sumForm">
-            <p class="sum">作業時間合計(h)
-                <input type="text" name="result" value="0.0" readonly>
-            </p>
         </form>
     </div>
 

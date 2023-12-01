@@ -1,6 +1,6 @@
-// window.onload = function () {
-//     setLunchTime()
-// }
+window.onload = function () {
+    calcTime()
+}
 
 
 dollar_to_yen_rate = 149.79
@@ -12,36 +12,57 @@ function clearNumber(formnum) {
     calcSum();
 }
 
-function calcTime(formnum) {
+function calcTime() {
     var ret = "";
-    let area = formnum.area.value;
-    let length_stay = formnum.length_stay.value;
-    let period = formnum.period.value;
-    let flight_fare = formnum.flight_fare.value;
-    let registration_fee = formnum.registration_fee.value;
-    let transportation = formnum.transportation.value;
-    let insurance = formnum.insurance.value;
-    let eSIM = formnum.eSIM.value;
-    let VISA = formnum.VISA.value;
+    let area = input_form.area.value;
+    let length_stay = parseInt(input_form.length_stay.value);
+    let period = parseInt(input_form.period.value);
+    let flight_fare = parseInt(input_form.flight_fare.value);
+    let registration_fee = parseInt(input_form.registration_fee.value);
+    let transportation = parseInt(input_form.transportation.value);
+    let insurance = parseInt(input_form.insurance.value);
+    let eSIM = parseInt(input_form.eSIM.value);
+    let VISA = parseInt(input_form.VISA.value);
 
 
     daily_pay = parseInt(calc_daily_pay(area, period));
     accommodation_fee = parseInt(calc_accommodation_fee(area, length_stay));
 
     ret += '############################################';
-    ret += '日当　　　　　　　：', daily_pay;
-    ret += '宿泊費　　　　　　：', accommodation_fee;
-    ret += '航空券　　　　　　：', flight_fare;
-    ret += 'その他交通費　　　：', transportation;
-    ret += '学会参加費　　　　：', registration_fee;
-    ret += '海外旅行保険　　　：', insurance;
-    ret += 'eSIM代　　 　　 　：', eSIM;
-    ret += '電子ビザ発行手数料：', VISA;
+    ret += "\n"
+    ret += '日当　　　　　　　：';
+    ret += daily_pay;
+    ret += "円\n"
+    ret += '宿泊費　　　　　　：';
+    ret += accommodation_fee;
+    ret += "円\n"
+    ret += '航空券　　　　　　：';
+    ret += flight_fare;
+    ret += "円\n"
+    ret += 'その他交通費　　　：';
+    ret += transportation;
+    ret += "円\n"
+    ret += '学会参加費　　　　：';
+    ret += registration_fee;
+    ret += "円\n"
+    ret += '海外旅行保険　　　：';
+    ret += insurance;
+    ret += "円\n"
+    ret += 'eSIM代　　 　　 　：';
+    ret += eSIM;
+    ret += "円\n"
+    ret += '電子ビザ発行手数料：';
+    ret += VISA;
+    ret += "円\n"
     ret += '--------------------------------------------';
-    ret += '合計　　　　　　　：', daily_pay + accommodation_fee + flight_fare + registration_fee + insurance + eSIM + VISA + transportation;
+    ret += "\n"
+    ret += '合計　　　　　　　：';
+    ret += daily_pay + accommodation_fee + flight_fare + registration_fee + insurance + eSIM + VISA + transportation;
+    ret += "円\n"
     ret += '############################################';
+    ret += "\n"
 
-    sumForm.result.value = ret;
+    input_form.result.value = ret;
 
 }
 

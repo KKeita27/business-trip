@@ -22,6 +22,8 @@
 </head>
 
 <body>
+    <script src="jquery.js"></script>
+    <script src="garlic.js"></script>
     <h5>出張稟議申請向けの計算結果を出力します。</h5>
     <!-- <div class="lunchTimeSet">
         <form name="lunchTime">
@@ -48,18 +50,44 @@
     </div> -->
 
     <div class="container">
-        <form name="input_form">
+        <form data-persist="garlic" method="post" name="input_form">
             <table>
+                <tr>
+                    <td>
+                        <div class="start">為替（USD/EUR）</div>
+                    </td>
+                    <td>
+                        <div class="start"><input type="text" onchange="calcTime()" name="currency_val" value="149.79">円
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>外貨の場合、ドルは149.79USD、ユーロは158.27EUR、イギリスポンドは182.64GBP、デンマーククローネは21.22DKKの為替レートで換算してください。その他の通貨は、下記のTTMレート（TTSとTTBの間）で計算お願いします。
+                        <a
+                            href="http://www.murc-kawasesouba.jp/fx/past/index.php?id=231002">http://www.murc-kawasesouba.jp/fx/past/index.php?id=231002</a>
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <div class="start">地域</div>
                     </td>
                     <td>
                         <div class="start"><select onchange="calcTime()" name="area">
-                                <option value="usa">USA</option>
+                                <option value="jp">日本</option>
+                                <option value="usa">北アメリカ</option>
                                 <option value="eu">EU</option>
-                                <option value="other">その他</option>
+                                <option value="other">その他海外 </option>
                             </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="start">宿泊費（0なら基準値を採用）</div>
+                    </td>
+                    <td>
+                        <div class="start"><input type="text" onchange="calcTime()" name="cost_stay" value="0">円
                         </div>
                     </td>
                 </tr>
